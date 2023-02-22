@@ -1,0 +1,316 @@
+:root {
+    --azul: #1632E9;
+    --azulOscuro: #0e1f89;
+    --blanco: #fff;
+    --amarillo: #FFCE00;
+    --rojo: #FF0000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+/*TITULO INSTITUAQ*/
+.header__uaq {
+    background-color: white;
+}
+.color-acento{
+    color: var(--azulOscuro);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+.text {
+    color: var(--azul);
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 10px;
+}
+/*BARRA DE MENÚ*/
+.container__menu{
+    width: 100%;
+    height: 70px;
+    background: #0006be;
+    padding: 0px 15px;
+}
+.menu{
+    max-width: 1300px;
+    margin: auto;
+    height: 100%;
+}
+nav{
+    height: 100%;
+}
+nav > ul {
+    height: 100%;
+    display: flex;
+}
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+nav > ul > li:first-child > a{
+    background-image: url(../img/hogar.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+nav > ul > li:first-child:hover > a{
+    background-image: url(../img/hogar.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/*Barra de busqueda*/
+.container__buscar {
+    text-align: center;
+    padding: 16px 80px;
+}
+.menu .container__buscar{
+    position: static;
+}
+.container__buscar input{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: blue;
+    outline: none;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+/*BARRA DE NAVEGACIÓN TITULOS*/
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 300ms ease;
+    padding: 38px;
+}
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background: #0051ff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+}
+/*ICONO HOME*/
+#selected { 
+    transform: scale(1.1);
+    background-color: #0006be;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+}
+
+/*SUB MENU INICIO*/
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+nav ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+nav ul li ul li a{
+    display: block;
+    color: #346eff;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+nav ul li ul li a:hover {
+    background: #ff0000;
+    color: #fff;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+}
+
+/*ELEMENTOS RESPONSIVOS ICONO HOME*/
+.icon__menu{
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+#label__check {
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+#check__menu{
+    display: none;
+}
+/**GRID**/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem;
+    padding: 0.5rem;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(6,1fr);
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*SECCION SERVICIOS*/
+.wrapper {
+    font-family: 'raleway';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fafafa;
+}
+.wrapper h1 {
+    font-size: 3em;
+    margin: 25px 0;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(15, 19, 255);
+}
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-top: 30px;
+}
+.card {
+    min-height: 220px;
+    width: 320px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    margin: 10px 4px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.card i{
+    margin: 20px;
+    color: blue;
+}
+.card h2 {
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+.card p {
+    color: #6c757d;
+    text-align: center;
+}
+.card:hover i,
+.card:hover p{
+    color: #fff;
+}
+.card:hover h2 {
+    font-weight: 600;
+    color: #f2f2f2;
+}
+.card:nth-child(1):hover {
+    background: linear-gradient(45deg,
+                                rgba(8, 53, 255, 0.7) 0%,
+                                rgba(255,0,82,0.7) 100%),
+                                url('/img/uaq.jfif');
+    background-size: cover;
+}
+.card:nth-child(2):hover {
+    background: linear-gradient(45deg,
+                                rgba(8, 53, 255, 0.7) 0%,
+                                rgba(255,0,82,0.7) 100%),
+                                url('/img/uaq.jfif');
+    background-size: cover;
+}
+.card:nth-child(3):hover {
+    background: linear-gradient(45deg,
+                                rgba(8, 53, 255, 0.7) 0%,
+                                rgba(255,0,82,0.7) 100%),
+                                url('/img/uaq.jfif');
+    background-size: cover;
+}
+.card:nth-child(4):hover {
+    background: linear-gradient(45deg,
+                                rgba(8, 53, 255, 0.7) 0%,
+                                rgba(255,0,82,0.7) 100%),
+                                url('/img/uaq.jfif');
+    background-size: cover;
+}
+.card:nth-child(5):hover {
+    background: linear-gradient(45deg,
+                                rgba(8, 53, 255, 0.7) 0%,
+                                rgba(255,0,82,0.7) 100%),
+                                url('/img/uaq.jfif');
+    background-size: cover;
+}
+.card:nth-child(6):hover {
+    background: linear-gradient(45deg,
+                                rgba(8, 53, 255, 0.7) 0%,
+                                rgba(255,0,82,0.7) 100%),
+                                url('/img/uaq.jfif');
+    background-size: cover;
+}
+@media(max-width: 991px){
+    .wrapper{
+        padding: 25px;
+    }
+    .wrapper h1{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .content-box{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card {
+        min-width: 300px;
+        margin: 10px auto;
+    }
+}
